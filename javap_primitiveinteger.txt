@@ -1,0 +1,23 @@
+Compiled from "PrimitivInteger.java"
+public class com.example.benchmark_bytecode.PrimitivInteger {
+  public com.example.benchmark_bytecode.PrimitivInteger();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public int primitivInteger();
+    Code:
+       0: bipush        100
+       2: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       5: astore_1
+       6: bipush        100
+       8: invokestatic  #7                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      11: astore_2
+      12: aload_1
+      13: invokevirtual #13                 // Method java/lang/Integer.intValue:()I
+      16: aload_2
+      17: invokevirtual #13                 // Method java/lang/Integer.intValue:()I
+      20: iadd
+      21: ireturn
+}

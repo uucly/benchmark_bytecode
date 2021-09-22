@@ -1,0 +1,112 @@
+com/example/benchmark_bytecode/BenchMark.integerValueOf()I  [0x00007fcb8ce21dc0, 0x00007fcb8ce21fb0]  496 bytes
+[Entry Point]
+[Constants]
+  # {method} {0x00007fcb7dcaefe0} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchMark'
+  #           [sp+0x70]  (sp of caller)
+  0x00007fcb8ce21dc0: mov    0x8(%rsi),%r10d
+  0x00007fcb8ce21dc4: shl    $0x3,%r10
+  0x00007fcb8ce21dc8: movabs $0x800000000,%r12
+  0x00007fcb8ce21dd2: add    %r12,%r10
+  0x00007fcb8ce21dd5: xor    %r12,%r12
+  0x00007fcb8ce21dd8: cmp    %rax,%r10
+  0x00007fcb8ce21ddb: jne    0x00007fcb8c89ce80  ;   {runtime_call ic_miss_stub}
+  0x00007fcb8ce21de1: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x00007fcb8ce21dec: data16 data16 xchg %ax,%ax
+  0x00007fcb8ce21df0: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x00007fcb8ce21dfb: data16 data16 xchg %ax,%ax
+  0x00007fcb8ce21dff: nop
+[Verified Entry Point]
+  0x00007fcb8ce21e00: mov    %eax,-0x14000(%rsp)
+  0x00007fcb8ce21e07: push   %rbp
+  0x00007fcb8ce21e08: sub    $0x60,%rsp
+  0x00007fcb8ce21e0c: movabs $0x7fcb7dce0220,%rdx
+  0x00007fcb8ce21e16: mov    0x18(%rdx),%edi
+  0x00007fcb8ce21e19: add    $0x8,%edi
+  0x00007fcb8ce21e1c: mov    %edi,0x18(%rdx)
+  0x00007fcb8ce21e1f: and    $0x3ff8,%edi
+  0x00007fcb8ce21e25: cmp    $0x0,%edi
+  0x00007fcb8ce21e28: je     0x00007fcb8ce21f00
+  0x00007fcb8ce21e2e: movabs $0x8002fce08,%rdx  ;   {metadata('java/lang/Integer')}
+  0x00007fcb8ce21e38: mov    0x118(%r15),%rax
+  0x00007fcb8ce21e3f: lea    0x10(%rax),%rdi
+  0x00007fcb8ce21e43: cmp    0x128(%r15),%rdi
+  0x00007fcb8ce21e4a: ja     0x00007fcb8ce21f21
+  0x00007fcb8ce21e50: mov    %rdi,0x118(%r15)
+  0x00007fcb8ce21e57: mov    0xb8(%rdx),%rcx
+  0x00007fcb8ce21e5e: mov    %rcx,(%rax)
+  0x00007fcb8ce21e61: mov    %rdx,%rcx
+  0x00007fcb8ce21e64: movabs $0x800000000,%r12
+  0x00007fcb8ce21e6e: sub    %r12,%rcx
+  0x00007fcb8ce21e71: shr    $0x3,%rcx
+  0x00007fcb8ce21e75: xor    %r12,%r12
+  0x00007fcb8ce21e78: mov    %ecx,0x8(%rax)
+  0x00007fcb8ce21e7b: xor    %rcx,%rcx
+  0x00007fcb8ce21e7e: mov    %ecx,0xc(%rax)
+  0x00007fcb8ce21e81: xor    %rcx,%rcx
+  0x00007fcb8ce21e84: mov    %rax,%rbx          ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@0 (line 35)
+
+  0x00007fcb8ce21e87: movl   $0xa,0xc(%rbx)     ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.Integer::<init>@6 (line 1083)
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@6 (line 35)
+
+  0x00007fcb8ce21e8e: movabs $0x8002fce08,%rdx  ;   {metadata('java/lang/Integer')}
+  0x00007fcb8ce21e98: mov    0x118(%r15),%rax
+  0x00007fcb8ce21e9f: lea    0x10(%rax),%rdi
+  0x00007fcb8ce21ea3: cmp    0x128(%r15),%rdi
+  0x00007fcb8ce21eaa: ja     0x00007fcb8ce21f2e
+  0x00007fcb8ce21eb0: mov    %rdi,0x118(%r15)
+  0x00007fcb8ce21eb7: mov    0xb8(%rdx),%rcx
+  0x00007fcb8ce21ebe: mov    %rcx,(%rax)
+  0x00007fcb8ce21ec1: mov    %rdx,%rcx
+  0x00007fcb8ce21ec4: movabs $0x800000000,%r12
+  0x00007fcb8ce21ece: sub    %r12,%rcx
+  0x00007fcb8ce21ed1: shr    $0x3,%rcx
+  0x00007fcb8ce21ed5: xor    %r12,%r12
+  0x00007fcb8ce21ed8: mov    %ecx,0x8(%rax)
+  0x00007fcb8ce21edb: xor    %rcx,%rcx
+  0x00007fcb8ce21ede: mov    %ecx,0xc(%rax)
+  0x00007fcb8ce21ee1: xor    %rcx,%rcx          ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@10 (line 36)
+
+  0x00007fcb8ce21ee4: movl   $0x14,0xc(%rax)    ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.Integer::<init>@6 (line 1083)
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@16 (line 36)
+
+  0x00007fcb8ce21eeb: mov    $0x1e,%eax
+  0x00007fcb8ce21ef0: add    $0x60,%rsp
+  0x00007fcb8ce21ef4: pop    %rbp
+  0x00007fcb8ce21ef5: mov    0x108(%r15),%r10
+  0x00007fcb8ce21efc: test   %eax,(%r10)        ;   {poll_return}
+  0x00007fcb8ce21eff: retq   
+  0x00007fcb8ce21f00: movabs $0x7fcb7dcaefe0,%r10  ;   {metadata({method} {0x00007fcb7dcaefe0} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchMark')}
+  0x00007fcb8ce21f0a: mov    %r10,0x8(%rsp)
+  0x00007fcb8ce21f0f: movq   $0xffffffffffffffff,(%rsp)
+  0x00007fcb8ce21f17: callq  0x00007fcb8c968d80  ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@-1 (line 35)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007fcb8ce21f1c: jmpq   0x00007fcb8ce21e2e
+  0x00007fcb8ce21f21: mov    %rdx,%rdx
+  0x00007fcb8ce21f24: callq  0x00007fcb8c965080  ; ImmutableOopMap{}
+                                                ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@0 (line 35)
+                                                ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00007fcb8ce21f29: jmpq   0x00007fcb8ce21e84
+  0x00007fcb8ce21f2e: mov    %rdx,%rdx
+  0x00007fcb8ce21f31: callq  0x00007fcb8c965080  ; ImmutableOopMap{rbx=Oop }
+                                                ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@10 (line 36)
+                                                ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00007fcb8ce21f36: jmp    0x00007fcb8ce21ee4
+  0x00007fcb8ce21f38: nop
+  0x00007fcb8ce21f39: nop
+  0x00007fcb8ce21f3a: mov    0x428(%r15),%rax
+  0x00007fcb8ce21f41: movabs $0x0,%r10
+  0x00007fcb8ce21f4b: mov    %r10,0x428(%r15)
+  0x00007fcb8ce21f52: movabs $0x0,%r10
+  0x00007fcb8ce21f5c: mov    %r10,0x430(%r15)
+  0x00007fcb8ce21f63: add    $0x60,%rsp
+  0x00007fcb8ce21f67: pop    %rbp
+  0x00007fcb8ce21f68: jmpq   0x00007fcb8c8d7180  ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007fcb8ce21f6d: hlt    

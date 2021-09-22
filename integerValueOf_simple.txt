@@ -1,0 +1,27 @@
+com/example/benchmark_bytecode/BenchMark.integerValueOf()I  [0x00007fa1ec34bd20, 0x00007fa1ec34bd98]  120 bytes
+[Entry Point]
+[Constants]
+  # {method} {0x00007fa1dcddefe8} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchMark'
+  #           [sp+0x20]  (sp of caller)
+  0x00007fa1ec34bd20: mov    0x8(%rsi),%r10d
+  0x00007fa1ec34bd24: shl    $0x3,%r10
+  0x00007fa1ec34bd28: movabs $0x800000000,%r12
+  0x00007fa1ec34bd32: add    %r12,%r10
+  0x00007fa1ec34bd35: xor    %r12,%r12
+  0x00007fa1ec34bd38: cmp    %r10,%rax
+  0x00007fa1ec34bd3b: jne    0x00007fa1e489ce80  ;   {runtime_call ic_miss_stub}
+  0x00007fa1ec34bd41: data16 xchg %ax,%ax
+  0x00007fa1ec34bd44: nopl   0x0(%rax,%rax,1)
+  0x00007fa1ec34bd4c: data16 data16 xchg %ax,%ax
+[Verified Entry Point]
+  0x00007fa1ec34bd50: sub    $0x18,%rsp
+  0x00007fa1ec34bd57: mov    %rbp,0x10(%rsp)    ;*synchronization entry
+                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@-1 (line 35)
+
+  0x00007fa1ec34bd5c: mov    $0x1e,%eax
+  0x00007fa1ec34bd61: add    $0x10,%rsp
+  0x00007fa1ec34bd65: pop    %rbp
+  0x00007fa1ec34bd66: mov    0x108(%r15),%r10
+  0x00007fa1ec34bd6d: test   %eax,(%r10)        ;   {poll_return}
+  0x00007fa1ec34bd70: retq   
+  0x00007fa1ec34bd71: hlt    

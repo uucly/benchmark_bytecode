@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  webapp:
+    image: maven:3.8-openjdk-11
+    working_dir: /code
+    volumes:
+      - ./:/code
+
+  webapp2:
+      image: ubuntu:18.04
+      working_dir: /code
+      volumes:
+        - ./:/code
+
