@@ -20650,7 +20650,7 @@ ImmutableOopMap{rsi=Oop rcx=Oop }pc offsets: 544 577 587 615 Compiled method (c2
  scopes pcs     [0x00007f73e7d19eb0,0x00007f73e7d19ee0] = 48
  dependencies   [0x00007f73e7d19ee0,0x00007f73e7d19ee8] = 8
 ----------------------------------------------------------------------
-com/example/benchmark_bytecode/BenchMark.integerValueOf()I  [0x00007f73e7d19e20, 0x00007f73e7d19e98]  120 bytes
+com/example/benchmark_bytecode/BenchMark.primitiveInteger()I  [0x00007f73e7d19e20, 0x00007f73e7d19e98]  120 bytes
 [Entry Point]
 [Constants]
   # {method} {0x00007f73d39aeff0} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchMark'
@@ -20668,7 +20668,7 @@ com/example/benchmark_bytecode/BenchMark.integerValueOf()I  [0x00007f73e7d19e20,
 [Verified Entry Point]
   0x00007f73e7d19e50: sub    $0x18,%rsp
   0x00007f73e7d19e57: mov    %rbp,0x10(%rsp)    ;*synchronization entry
-                                                ; - com.example.benchmark_bytecode.BenchMark::integerValueOf@-1 (line 35)
+                                                ; - com.example.benchmark_bytecode.BenchMark::primitiveInteger@-1 (line 35)
 
   0x00007f73e7d19e5c: mov    $0x1e,%eax
   0x00007f73e7d19e61: add    $0x10,%rsp
@@ -20676,41 +20676,4 @@ com/example/benchmark_bytecode/BenchMark.integerValueOf()I  [0x00007f73e7d19e20,
   0x00007f73e7d19e66: mov    0x108(%r15),%r10
   0x00007f73e7d19e6d: test   %eax,(%r10)        ;   {poll_return}
   0x00007f73e7d19e70: retq   
-  0x00007f73e7d19e71: hlt    
-  0x00007f73e7d19e72: hlt    
-  0x00007f73e7d19e73: hlt    
-  0x00007f73e7d19e74: hlt    
-  0x00007f73e7d19e75: hlt    
-  0x00007f73e7d19e76: hlt    
-  0x00007f73e7d19e77: hlt    
-  0x00007f73e7d19e78: hlt    
-  0x00007f73e7d19e79: hlt    
-  0x00007f73e7d19e7a: hlt    
-  0x00007f73e7d19e7b: hlt    
-  0x00007f73e7d19e7c: hlt    
-  0x00007f73e7d19e7d: hlt    
-  0x00007f73e7d19e7e: hlt    
-  0x00007f73e7d19e7f: hlt    
-[Exception Handler]
-[Stub Code]
-  0x00007f73e7d19e80: jmpq   0x00007f73e02a3500  ;   {no_reloc}
-[Deopt Handler Code]
-  0x00007f73e7d19e85: callq  0x00007f73e7d19e8a
-  0x00007f73e7d19e8a: subq   $0x5,(%rsp)
-  0x00007f73e7d19e8f: jmpq   0x00007f73e0269c20  ;   {runtime_call DeoptimizationBlob}
-  0x00007f73e7d19e94: hlt    
-  0x00007f73e7d19e95: hlt    
-  0x00007f73e7d19e96: hlt    
-  0x00007f73e7d19e97: hlt    
-Compiled method (c1)  112875  370 %     3       com.example.benchmark_bytecode.jmh_generated.BenchMark_integerValueOf_jmhTest::integerValueOf_thrpt_jmhStub @ 13 (57 bytes)
- total in heap  [0x00007f73e07f1510,0x00007f73e07f22f0] = 3552
- relocation     [0x00007f73e07f1688,0x00007f73e07f1710] = 136
- main code      [0x00007f73e07f1720,0x00007f73e07f1d40] = 1568
- stub code      [0x00007f73e07f1d40,0x00007f73e07f1d90] = 80
- oops           [0x00007f73e07f1d90,0x00007f73e07f1d98] = 8
- metadata       [0x00007f73e07f1d98,0x00007f73e07f1dc8] = 48
- scopes data    [0x00007f73e07f1dc8,0x00007f73e07f1fe0] = 536
- scopes pcs     [0x00007f73e07f1fe0,0x00007f73e07f22a0] = 704
- dependencies   [0x00007f73e07f22a0,0x00007f73e07f22a8] = 8
- nul chk table  [0x00007f73e07f22a8,0x00007f73e07f22f0] = 72
-----------------------------------------------------------------------
+  0x00007f73e7d19e71: hlt

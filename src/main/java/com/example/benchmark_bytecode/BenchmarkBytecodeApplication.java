@@ -10,12 +10,13 @@ public class BenchmarkBytecodeApplication {
     public static void main(String[] args) throws RunnerException {
 
         Options opt = new OptionsBuilder()
+             //   .include(BenchMarkArray.class.getSimpleName())
                 .include(BenchMark.class.getSimpleName())
+//                .include(BenchMarkDataConsistency.class.getSimpleName())
                 .forks(1)
                 .build();
 
         new Runner(opt).run();
-        //SpringApplication.run(BenchmarkBytecodeApplication.class, args);
     }
 
 }

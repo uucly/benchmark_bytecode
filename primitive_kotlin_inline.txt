@@ -1,0 +1,55 @@
+com/example/benchmark_bytecode/BenchmarkKotlin.integerValueOf()I  [0x00007f74d8e23e40, 0x00007f74d8e23f50]  272 bytes
+[Entry Point]
+[Constants]
+  # {method} {0x00007f74d854cf88} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchmarkKotlin'
+  #           [sp+0x60]  (sp of caller)
+  0x00007f74d8e23e40: mov    0x8(%rsi),%r10d
+  0x00007f74d8e23e44: shl    $0x3,%r10
+  0x00007f74d8e23e48: movabs $0x800000000,%r12
+  0x00007f74d8e23e52: add    %r12,%r10
+  0x00007f74d8e23e55: xor    %r12,%r12
+  0x00007f74d8e23e58: cmp    %rax,%r10
+  0x00007f74d8e23e5b: jne    0x00007f74d889ce80  ;   {runtime_call ic_miss_stub}
+  0x00007f74d8e23e61: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x00007f74d8e23e6c: data16 data16 xchg %ax,%ax
+  0x00007f74d8e23e70: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x00007f74d8e23e7b: data16 data16 xchg %ax,%ax
+  0x00007f74d8e23e7f: nop
+[Verified Entry Point]
+  0x00007f74d8e23e80: mov    %eax,-0x14000(%rsp)
+  0x00007f74d8e23e87: push   %rbp
+  0x00007f74d8e23e88: sub    $0x50,%rsp
+  0x00007f74d8e23e8c: movabs $0x7f74d8552d78,%rax
+  0x00007f74d8e23e96: mov    0x18(%rax),%edi
+  0x00007f74d8e23e99: add    $0x8,%edi
+  0x00007f74d8e23e9c: mov    %edi,0x18(%rax)
+  0x00007f74d8e23e9f: and    $0x3ff8,%edi
+  0x00007f74d8e23ea5: cmp    $0x0,%edi
+  0x00007f74d8e23ea8: je     0x00007f74d8e23ec3  ;*iconst_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - com.example.benchmark_bytecode.BenchmarkKotlin::integerValueOf@0 (line 13)
+
+  0x00007f74d8e23eae: mov    $0xc8,%eax
+  0x00007f74d8e23eb3: add    $0x50,%rsp
+  0x00007f74d8e23eb7: pop    %rbp
+  0x00007f74d8e23eb8: mov    0x108(%r15),%r10
+  0x00007f74d8e23ebf: test   %eax,(%r10)        ;   {poll_return}
+  0x00007f74d8e23ec2: retq   
+  0x00007f74d8e23ec3: movabs $0x7f74d854cf88,%r10  ;   {metadata({method} {0x00007f74d854cf88} 'integerValueOf' '()I' in 'com/example/benchmark_bytecode/BenchmarkKotlin')}
+  0x00007f74d8e23ecd: mov    %r10,0x8(%rsp)
+  0x00007f74d8e23ed2: movq   $0xffffffffffffffff,(%rsp)
+  0x00007f74d8e23eda: callq  0x00007f74d8968d80  ; ImmutableOopMap{rsi=Oop }
+                                                ;*synchronization entry
+                                                ; - com.example.benchmark_bytecode.BenchmarkKotlin::integerValueOf@-1 (line 13)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00007f74d8e23edf: jmp    0x00007f74d8e23eae
+  0x00007f74d8e23ee1: nop
+  0x00007f74d8e23ee2: nop
+  0x00007f74d8e23ee3: mov    0x428(%r15),%rax
+  0x00007f74d8e23eea: movabs $0x0,%r10
+  0x00007f74d8e23ef4: mov    %r10,0x428(%r15)
+  0x00007f74d8e23efb: movabs $0x0,%r10
+  0x00007f74d8e23f05: mov    %r10,0x430(%r15)
+  0x00007f74d8e23f0c: add    $0x50,%rsp
+  0x00007f74d8e23f10: pop    %rbp
+  0x00007f74d8e23f11: jmpq   0x00007f74d88d7180  ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00007f74d8e23f16: hlt
